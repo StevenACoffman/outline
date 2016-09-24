@@ -1,4 +1,29 @@
-This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
+This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app), like so:
+
+```bash
+npm install -g create-react-app
+
+create-react-app my-app
+cd my-app
+#Redux is an additional concept, and so a hurdle, but you will really want it for anything non-trivial
+npm install --save redux
+npm install --save react-redux
+
+#Redux thunk will be the simplest way to deal with asynchronous (AJAX) and we want that for save
+npm install --save redux-thunk
+
+# window.fetch polyfill : The global fetch function is an easier way to make web requests and handle responses than using an XMLHttpRequest.
+npm install whatwg-fetch --save
+
+#Optional: Support for colocating your styles with your JavaScript component. Use whatever is familiar initially. Stick with Sass, bootstrap, whatever until you feel ready
+npm install --save aphrodite
+
+#Optional:Use what you know. Keep using Zurb Foundation if you already are
+npm install react-foundation --save
+
+#Optional: Use what you know. Keep using Twitter bootstrap if you already are
+npm install react-bootstrap --save
+```
 
 Below you will find some information on how to perform common tasks.  
 You can find the most recent version of this guide [here](https://github.com/facebookincubator/create-react-app/blob/master/template/README.md).
@@ -361,7 +386,7 @@ Inside `index.html`, you can use it like this:
 
 Only files inside the `public` folder will be accessible by `%PUBLIC_URL%` prefix. If you need to use a file from `src` or `node_modules`, you’ll have to copy it there to explicitly specify your intention to make this file a part of the build.
 
-When you run `npm run build`, Create React App will substitute `%PUBLIC_URL%` with a correct absolute path so your project works even if you use client-side routing or host it at a non-root URL. 
+When you run `npm run build`, Create React App will substitute `%PUBLIC_URL%` with a correct absolute path so your project works even if you use client-side routing or host it at a non-root URL.
 
 In JavaScript code, you can use `process.env.PUBLIC_URL` for similar purposes:
 
