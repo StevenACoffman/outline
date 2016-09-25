@@ -1,13 +1,16 @@
 import React, { Component } from 'react';
 import {Button, ButtonGroup, Col, ControlLabel, DropdownButton, FormControl, FormGroup,
   Glyphicon, Grid, HelpBlock, ListGroup, ListGroupItem, MenuItem, Panel, Row} from 'react-bootstrap';
+import { StyleSheet, css } from 'aphrodite';
+
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.css';
 
-const styles = {
-  output: {height: "21.5em"},
-  outputRender: {height: "100%"}
-};
+const styles = StyleSheet.create({
+  top15: {
+    marginTop: '15px'
+  }
+});
 
 const title = (
   <h3>Build Outline: Robots</h3>
@@ -16,6 +19,7 @@ class App extends Component {
   render() {
     return (
       <div>
+        <div className={css(styles.top15)}>&nbsp;</div>
         <Grid>
           <Row>
             <Col xs={10} xsOffset={1}>
