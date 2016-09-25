@@ -3,6 +3,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ```bash
 npm install -g create-react-app
 
+npm install -g eslint-config-react-app eslint babel-eslint eslint-plugin-react eslint-plugin-import eslint-plugin-jsx-a11y eslint-plugin-flowtype
+
 create-react-app my-app
 cd my-app
 #Redux is an additional concept, and so a hurdle, but you will really want it for anything non-trivial
@@ -19,10 +21,12 @@ npm install whatwg-fetch --save
 npm install --save aphrodite
 
 #Optional:Use what you know. Keep using Zurb Foundation if you already are
-npm install react-foundation --save
+#npm install react-foundation --save
+#npm install foundation-site --save
 
 #Optional: Use what you know. Keep using Twitter bootstrap if you already are
 npm install react-bootstrap --save
+npm install bootstrap --save
 ```
 
 Below you will find some information on how to perform common tasks.  
