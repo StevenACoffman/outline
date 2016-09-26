@@ -9,6 +9,12 @@ import 'bootstrap/dist/css/bootstrap.css';
 const styles = StyleSheet.create({
   top15: {
     marginTop: '15px'
+  },
+  container: {
+    display: 'flex'
+  },
+  item: {
+    flexGrow: 1
   }
 });
 
@@ -26,17 +32,17 @@ class App extends Component {
               <Panel header={title}>
                 <section>
                   <FormGroup>
-                    <ButtonGroup>
-                      <DropdownButton title="Citation Format">
+                    <ButtonGroup className={css(styles.container)}>
+                      <DropdownButton title="Citation Format" className={css(styles.item)}>
                         <MenuItem eventKey="1" active>APA</MenuItem>
                         <MenuItem eventKey="2">MLA</MenuItem>
                       </DropdownButton>
-                      <DropdownButton title="File Format">
+                      <DropdownButton title="File Format" className={css(styles.item)}>
                         <MenuItem eventKey="1" active>APA</MenuItem>
                         <MenuItem eventKey="2">Text File (.txt)</MenuItem>
                       </DropdownButton>
-                      <Button>Save <Glyphicon glyph="floppy-save" /></Button>
-                      <Button>Download <Glyphicon glyph="download-alt" /></Button>
+                      <Button className={css(styles.item)}>Save <Glyphicon glyph="floppy-save" /></Button>
+                      <Button className={css(styles.item)}>Download <Glyphicon glyph="download-alt" /></Button>
                     </ButtonGroup>
                   </FormGroup>
                 </section>
